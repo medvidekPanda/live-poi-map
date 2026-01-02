@@ -6,10 +6,10 @@
 /out-tsc
 /bazel-out
 
-# Node
+# Node modules and dependency files
 /node_modules
-npm-debug.log
-yarn-error.log
+/package-lock.json
+/yarn.lock
 
 # IDEs and editors
 .idea/
@@ -28,6 +28,13 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Angular specific
+/.angular/
+.angular/
+/e2e/test-output/
+/.angular-cli.json
+/.ng/
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -37,6 +44,17 @@ yarn-error.log
 testem.log
 /typings
 __screenshots__/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment files
+/.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # System files
 .DS_Store
