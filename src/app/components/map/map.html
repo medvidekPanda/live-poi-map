@@ -1,0 +1,79 @@
+<div class="flex h-full w-full">
+  <!-- <p-dialog
+    header="Header"
+    modal="false"
+    [visible]="true"
+    position="topright"
+    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+    maximizable="true"
+    resizable="false"
+    draggable="false"
+    [pt]="dialogPt"
+  >
+    <p>Lorem ipsum dolor sit amet...</p>
+  </p-dialog> -->
+
+  <div class="flex flex-3 relative">
+    <p-menubar
+      class="absolute top-4 left-4 right-4 z-10"
+      [model]="items"
+    >
+      <ng-template #start>
+        <svg
+          width="33"
+          height="35"
+          viewBox="0 0 33 35"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="..."
+            fill="var(--primary-color)"
+          />
+        </svg>
+      </ng-template>
+      <ng-template
+        #item
+        let-item
+        let-root="root"
+      >
+        <a
+          pRipple
+          class="flex items-center px-4 py-3 cursor-pointer gap-2"
+        >
+          <span>{{ item.label }}</span>
+        </a>
+      </ng-template>
+      <ng-template #end>
+        <div class="flex items-center gap-2">
+          <input
+            type="text"
+            pInputText
+            placeholder="Search"
+            class="w-36"
+          />
+          <p-avatar
+            image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+            shape="circle"
+          />
+        </div>
+      </ng-template>
+    </p-menubar>
+
+    <mgl-map
+      class="flex-1"
+      [mapStyle]="'https://api.maptiler.com/maps/outdoor-v4/style.json?key=xhAGbfTZ4k96jWwK2lyC'"
+      [zoom]="[12]"
+      [center]="[15.8597120, 49.5681536]"
+    />
+  </div>
+
+  <div class="flex-1 overflow-x-hidden p-8">
+    <h1 class="heading-primary">Název senzoru</h1>
+    <p-image
+      src="https://primefaces.org/cdn/primeng/images/galleria/galleria10.jpg"
+      alt="Image"
+      class="max-w-full"
+    />
+  </div>
+</div>

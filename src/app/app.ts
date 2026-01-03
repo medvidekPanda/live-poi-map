@@ -1,12 +1,12 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  templateUrl: "./app.html",
+  host: {
+    class: "fixed inset-0 border overflow-hidden",
+  },
 })
-export class App {
-  protected readonly title = signal('live-poi-map');
-}
+export class App {}

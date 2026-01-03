@@ -1,3 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+@import "tailwindcss-primeui";
+
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+@layer utilities {
+  .heading-primary {
+    @apply text-3xl font-bold text-surface-900 mb-4;
+  }
+}
